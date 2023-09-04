@@ -1,11 +1,20 @@
 :root {
   --gray-color: #a9a9a9;
   --border-radius: 12px;
+  --secondary-color: #bdbdbd;
+  --primary-color: #e5e5e5;
+  --neuteral-dark: #4e5150;
+  --font-primary: "Montserrat", sans-serif;
+}
+a:link {
 }
 * {
   margin: 0px;
   padding: 0px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-primary);
+}
+a:link {
+  text-decoration: none;
 }
 
 img {
@@ -13,7 +22,7 @@ img {
   display: block;
 }
 
-.container-top {
+header {
   width: 90%;
   margin: 0 auto;
 }
@@ -30,14 +39,15 @@ img {
 }
 .profile-info img {
   width: 141px;
-  border-radius: 10%;
+  border-radius: 16px;
+  margin-top: 20px;
   margin-top: 20px;
 }
 
-.profile-info h2 {
+.profile-info .profile-name {
   font-size: 14px;
   line-height: 17px;
-  color: #4e5150;
+  color: var(--neutral-dark);
   margin-top: 25px;
 }
 
@@ -55,8 +65,8 @@ img {
   gap: 10%;
   margin-top: 10px;
 }
-.box1 {
-  background-color: #e5e5e5;
+.profile-post-details {
+  background-color: var(--primary-color);
   font-size: 12px;
   font-weight: 600;
   width: 78px;
@@ -67,12 +77,12 @@ img {
   justify-content: center;
   flex-direction: column;
 }
-.box h4 {
+.profile-post-details .total-post {
   font-size: 12px;
   line-height: 14px;
 }
-.box1 p {
-  color: #bdbdbd;
+.profile-post-details .post {
+  color: var(--secondary-color);
   font-weight: 600;
   font-size: 12px;
   line-height: 14px;
@@ -84,10 +94,9 @@ img {
 .gallary-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: 109px 109px 109px; */
+
   gap: 10px;
 
-  /* max-width: 280px; */
   width: 80%;
   margin: 0 auto;
 }
@@ -108,24 +117,26 @@ img {
 .grid-items4 {
   grid-area: 2/3/4/3;
 }
-.grid-items5 {
-}
-.griod-items6 {
-}
-.grid-items6 {
-}
+
 footer {
   margin-top: 20px;
 
   font-size: 14px;
   font-weight: 700;
 
-  color: #b9bdcf;
+  color: var(--secondary-color);
   text-align: center;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 800px) {
-  .profile-info h2 {
+  .profile-info img {
+    width: 156px;
+
+    height: 156px;
+  }
+
+  .profile-info .profile-name {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -135,18 +146,21 @@ footer {
     margin-top: 8px;
   }
 
-  .box1 {
+  .profile-post-details {
     font-size: 12px;
     width: 100px;
     height: 67px;
   }
 
-  .box1 h2 {
+  .profile-post-details .total-post {
     font-size: 18px;
     line-height: 29px;
   }
-  .box1 {
+  .profile-post-details {
     font-size: 14px;
     line-height: 17px;
+  }
+  footer {
+    font-style: 500;
   }
 }
