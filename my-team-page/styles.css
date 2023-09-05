@@ -25,10 +25,8 @@ img {
 
 .container {
   width: 90%;
-  /* max-width: 1280px; */
   margin-left: auto;
   margin-right: auto;
-  /* margin: 0 auto; */
 }
 .header {
   display: flex;
@@ -40,9 +38,6 @@ img {
   font-family: var(--primary-font);
   font-weight: 700;
   font-size: 36px;
-}
-.header__info {
-  /* border: 12px solid red; */
 }
 
 .header__info .header__info--title {
